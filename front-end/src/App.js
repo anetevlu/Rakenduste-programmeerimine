@@ -1,11 +1,22 @@
 import './App.css';
-import Item from './components/item';
+import {Route} from 'react-router-dom';
+import Home from './pages/Home';
+import Cart from './pages/Cart';
+
 
 function App() {
   return (
-    <div className="App">
-      Tere!
-      <Item />
+    <div>
+      <Route path='/' exact>
+        <Home />
+      </Route>
+      <Route path='/cart' exact>
+        <Cart />
+      </Route>
+      <Route path='/add-item' exact>
+        <div>Add-item, mis pole veel valmis</div>
+      </Route>
+     
     </div>
   );
 }

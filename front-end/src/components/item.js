@@ -1,9 +1,9 @@
-function Item() {
+function Item(props) {
     return (
         <div>
-            <div clasSName="itemName">Ese nr1</div>
-            <div clasSName="itemPrice">100</div>
-            <div clasSName="itemCategory">mobiles</div>
+            <div clasSName="itemName">{props.name}</div>
+            <div clasSName="itemPrice">{props.price}</div>
+            <div clasSName="itemCategory">{props.category}</div>
         </div>
     )
 }

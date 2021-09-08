@@ -14,20 +14,15 @@ import java.util.List;
 public class CategoryController {
     @Autowired
     CategoryService categoryService;
-    @GetMapping("categorys")
-    public List<Category> getCategorys(){
-        return CategoryService.getCategorys();
+    @GetMapping("categories")
+    public List<Category> getCategories(){
+
+        return categoryService.getCategories();
     }
 
-    @PostMapping("categorys")
-    public String postCategorys(@RequestBody Category category){
-        CategoryService.saveCategory(category);
+    @PostMapping("categories")
+    public String postCategories(@RequestBody Category category){
+        categoryService.saveCategory(category);
         return "Kategooria edukalt lisatud: " + category.getName();
     }
-    //delete päring
-
-    //edit päring
-    //view one päring
-
-    //kategooria teha samamoodi nagu itemid
 }

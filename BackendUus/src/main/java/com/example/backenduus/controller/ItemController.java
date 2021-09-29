@@ -3,14 +3,12 @@ package com.example.backenduus.controller;
 import com.example.backenduus.model.Item;
 import com.example.backenduus.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 public class ItemController {
     @Autowired
     ItemService itemService;
@@ -24,15 +22,9 @@ public class ItemController {
 
     //post ehk alati peaks url-le midagi kaasa andma, tavaliselt JSON kujul
     @PostMapping("items")
-    public String postItem(@RequestBody Item item){ //requestBody ütleb, et midagi peab päringuga kaasa minema
+    public String postItem(@RequestBody Item item) { //requestBody ütleb, et midagi peab päringuga kaasa minema
         itemService.saveItem(item); //kui tehakse post päring sellele url-le ja antakse kaasa body,
         // siis läheb see funk käima ja front endile tagastatakse see kirje
         return "Ese edukalt lisatud: " + item.getName();
     }
-    //delete päring
-
-    //edit päring
-    //view one päring
-
-    //kategooria teha samamoodi nagu itemid
 }

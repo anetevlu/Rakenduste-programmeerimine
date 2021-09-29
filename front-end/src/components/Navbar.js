@@ -10,6 +10,9 @@ function Navbar(){
             <Link to="cart">
                 <img src="shopping-cart.svg" alt="" className="cart"/>
             </Link>
+            <Link to="categories">
+                <img src="check-list.svg" alt="" className="categories"/>
+            </Link>
         </div>
     );
 }

@@ -1,4 +1,3 @@
-//import Item from "../components/item";
 import ItemList from "../components/ItemList";
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';

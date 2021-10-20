@@ -21,4 +21,19 @@ public class ItemService {  //uhendame ära repo auto-wire
     public void saveItem(Item item) { //void sest peale salvestamist pole vaja midagi tagastada
         itemRepository.save(item); //save teeb insert into ja item tabelisse item
     }
+
+    public void deleteItem(Long id) {
+        itemRepository.deleteById(id);
+    }
+
+    public void editItem(Item item) {
+        itemRepository.save(item);
+    }
+
+    public Item getOneItem(Long id) throws Exception {
+        if(itemRepository.findById(id).isPresent()){
+            return itemRepository.findById(id).get();
+        }
+        throw new Exception();
+    }
 }

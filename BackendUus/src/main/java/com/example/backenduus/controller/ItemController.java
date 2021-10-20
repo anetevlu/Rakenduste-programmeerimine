@@ -23,8 +23,23 @@ public class ItemController {
     //post ehk alati peaks url-le midagi kaasa andma, tavaliselt JSON kujul
     @PostMapping("items")
     public String postItem(@RequestBody Item item) { //requestBody ütleb, et midagi peab päringuga kaasa minema
-        itemService.saveItem(item); //kui tehakse post päring sellele url-le ja antakse kaasa body,
-        // siis läheb see funk käima ja front endile tagastatakse see kirje
+        itemService.saveItem(item);
         return "Ese edukalt lisatud: " + item.getName();
+    }
+
+    @DeleteMapping("delete-item/{id}")
+    public List<Item> deleteItem(@PathVariable Long id) {
+        itemService.deleteItem(id);
+        return itemService.getItems();
+    }
+
+    @PostMapping("edit-item")
+    public void editItem(@RequestBody Item item) {
+        itemService.editItem(item);
+    }
+
+    @GetMapping("view-item/{id}")
+    public Item getOneItem(@PathVariable Long id) throws Exception {
+        return itemService.getOneItem(id);
     }
 }

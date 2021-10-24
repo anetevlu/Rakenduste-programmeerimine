@@ -1,3 +1,36 @@
 h1 {
   text-align: center;
 }
+
+button{
+  border-radius: 5px;
+  text-align: center;
+  padding: 7px;  
+  border-width: 1px;
+  background-color: rgba(190, 190, 190, 0.651);
+  cursor: pointer;
+}
+
+button:hover{
+  font-weight: bolder;
+}
+
+.item{
+  background-color: rgb(144, 238, 238);
+  padding: 25px;
+  margin: 10px;
+  text-align: center;
+  width: 150px;
+  justify-content: center;
+  border: none;
+  border-radius: 5px;
+}
+
+.item-list{
+  display: flex;
+  justify-content: center;
+}
+
+.add-item-button{
+  margin-left: 20px;
+}

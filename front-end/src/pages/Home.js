@@ -21,8 +21,9 @@ function Home() {
 
     return (
         <div>
+            <br />
             <Link to="add-item">
-                <button>Lisa uus item</button>
+                <button className="add-item-button">Lisa uus item</button>
             </Link>
             <ItemList items={loadedItems} />
         </div>

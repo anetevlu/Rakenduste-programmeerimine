@@ -31,7 +31,7 @@ function AddCategoryForm(props){
             </select>
             <br />
             <br />
-            <button>Lisa kategooria!</button>
+            <button>Lisa kategooria</button>
         </form>
     );
 }

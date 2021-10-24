@@ -1,16 +1,24 @@
 .navbar {
     background-color: rgba(143, 143, 143, 0.651);
-    height: 150px;
+    height: 110px;
     display: flex;
     justify-content: space-between;
 }
 
 .cart {
     height: 50px;
-    margin: 50px;
+    margin: 30px;
 }
 
 .categories{
     height: 50px;
-    margin: 50px;
+    margin: 30px;
+}
+
+.logo{
+    height: 110px;
+}
+
+.cart:hover, .categories:hover{
+    height: 60px;
 }

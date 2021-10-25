@@ -6,6 +6,8 @@ import Navbar from './components/Navbar';
 import AddItem from './pages/AddItem';
 import Categories from './pages/Categories';
 import AddCategory from './pages/AddCategory';
+import AdminHome from './pages/AdminHome';
+import SingleItem from './pages/SingleItem';
 
 function App() {
   return (
@@ -25,6 +27,12 @@ function App() {
       </Route>   
       <Route path='/add-category' exact>
         <AddCategory />
+      </Route>
+      <Route path='/admin' exact>
+        <AdminHome />
+      </Route>
+      <Route path='/item/:itemId'>
+        <SingleItem />
       </Route>
     </div>
   );

@@ -2,6 +2,7 @@ package com.example.backenduus.controller;
 
 import com.example.backenduus.model.Item;
 import com.example.backenduus.service.ItemService;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,7 +33,7 @@ public class ItemController {
         itemService.deleteItem(id);
         return itemService.getItems();
     }
-
+    @ApiOperation("API otspunkt eseme muutmiseks, alati saata kaasa ID")
     @PostMapping("edit-item")
     public void editItem(@RequestBody Item item) {
         itemService.editItem(item);

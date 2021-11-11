@@ -10,7 +10,7 @@ const postReducer = (state, action) => {
         case POST_REMOVE:
             return {
                 ...state,
-                data: state.data.filter(post => post.id !== action.payload)
+                data: state.data.filter(post => post._id !== action.payload)
             }
         default:
             return state

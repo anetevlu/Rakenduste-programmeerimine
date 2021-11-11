@@ -18,14 +18,12 @@ router.post("/signup", [
         .isLength({ min: 3})
         .withMessage('Must be at least 3 characters long.')
         .trim()
-        .exists()
         .matches(/^[A-ZÕÄÖÜa-zõäöü]+$/)
         .withMessage('Must be alphabetic.'),
     check('lastName')
         .isLength({ min: 3})
         .withMessage('Must be at least 3 characters long.')
         .trim()
-        .exists()
         .matches(/^[A-ZÕÄÖÜa-zõäöü]+$/)
         .withMessage('Must be alphabetic.'),
     check('email')
